@@ -86,6 +86,99 @@ print(name)
 
 list = [] ## initialize
 list = ['A', 23, "Bob"]
-for element in list {
-    print(element)
-}
+
+my_first_list = list[0]
+print(my_first_list)
+
+#-------------------------------------------------------
+#-------------------------------------------------------
+
+
+#   9월 13일 2주차 파이썬 문법 속성
+
+## pythonic? => 파이썬스러운
+## 변수 네이밍 작업 => 소문자, 대문자(group, GROUP)
+
+
+## 1. CamelCase
+myFirstVariable = "My first variable with Camel Case"
+MyFirstVariable = "My first variable with Camel Case"
+
+
+## 2. SnakeCase
+my_first_variable = "My_first_variable_with_Snake_Case"
+
+## 상수같은 경우에는 대문자로 쓰면 좋음 ex) G = 9.81, PLANK = 3.1 or PLANK_NUMBER = 3.1
+
+name = "Elyot"
+ID = "32190956"
+SCORE = "4.5"
+age = 23
+
+x = 3
+y = 7
+if x>2:
+    print(x, y)
+
+##연산자
+## +, -, *, /
+## in, notin
+
+text = "python is fun"
+if "fun" in text:
+    print("Exist");
+
+print("")
+print("")
+print("")
+print(text[0])
+print(text[4])
+print(text[7])
+print("")
+print("")
+print("")
+print(len(text))
+
+
+
+## slice? [시작:끝]
+
+slicedText = text[9:]
+print(slicedText)
+
+## nagative index
+
+nag = text[-1]
+print(nag)
+
+
+# 출력
+#  1. %
+#  2. format
+#  4. f-string
+
+
+ex1 = 1
+ex2 = 3.0
+ex3 = ex1/ex2
+
+print(ex3)
+
+print(f'x = {x}')
+
+# if문, for문
+
+## 반복문 만들기
+
+# for i in range(len(text)):
+#     print(i);
+
+for i in range(1,6):
+    print(i);
+
+## 조건문 만들기
+
+if ex2 > 4:
+    print(f'ex2는 4보다 큽니다');
+else:
+    print(f'ex2는 {ex2}');
