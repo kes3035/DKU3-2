@@ -110,7 +110,8 @@ myTestScore = 89.0
 if myTestScore >= 90:
     print("A입니다.");
 else:
-    print("A가 아닙니다.")
+    print("A가 아닙니다.");
 
-
-
+print("")
+print("")
+print("")
