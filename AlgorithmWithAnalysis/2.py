@@ -91,4 +91,9 @@ print('')
 ## MarkDown 언어 지원
 ## LaTeX과 수식
 ## Jupyter notebook과 보고서 작성
+## 수식표기?
+### $\intf(x)dx = 3$ => 적분
+### $3\times4=12$
+### $\sqrt{2}$
+### $\frac{1}{x}$
 
