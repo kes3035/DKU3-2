@@ -67,3 +67,6 @@ for i in range(len(x)):
     hap += x[i]*w[i]
 print(f'hap = {hap}')
 
+## 합의 알고리즘을 코딩할 때, 시작점과 끝점의 차이 i=1 -> N, i=0 -> N-1 는 같은 이야기
+## 어차피 N개 이므로.
+
