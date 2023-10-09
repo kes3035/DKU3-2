@@ -85,6 +85,6 @@ for i in range(5):
 # 위와 같은 코드를 numpy 내부의 메서드를 통해 간단하게 구현
 
 x = np.array([100, 101, 102])
-hap = np.sum(x)
+hap = np.sum(x)             #numpy에서 제공하는 sum 메서드의 속도는 굉장히 빠름
 
 print(f'hap = {hap}')
