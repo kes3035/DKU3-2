@@ -1,11 +1,17 @@
-# 11.21 (W)
-## 행렬연산
+# 행렬연산
 
-import numpy as np
+"""
+전치(transpose) => a.T
+행렬식(determinant) => np.linalg.det(a)
+역행렬(inversed) => np.linalg.inv(a)
+"""
+
 
 a = np.array([1,2,3])
 b = np.array([4,5,6])
 print(f'c = {a@b}')
+
+print(f'c = {a@b.T}')
 
 c = np.array([[1, 9, 99], [2, 8, 88], [3, 7, 77]])
 print(f'c.T = \n{c.T}')

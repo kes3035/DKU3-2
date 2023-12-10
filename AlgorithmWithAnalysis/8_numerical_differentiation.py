@@ -1,35 +1,45 @@
-# 기말 범위 시작
 import numpy as np
-"""
-미분식 (Differential)
-차분식 (Difference)
- 1. 전진차분(Forward)
- 2. 후진차분(Backward)
- 3. 중간차분(Centered)
-"""
 
-# 정의된 함수
+
 def f(x):
+    #여기서 함수 작성하기
     return x*np.exp(-x)
 
 def forwardDiff(func, xi, h):
     xpi = xi + h
-    return print((func(xpi) - func(xi))/h)
+    return print(f'전진차분식 = {(func(xpi) - func(xi))/h}')
 
 def backwardDiff(func, xi, h):
     xmi = xi - h
-    return print((func(xi) - func(xmi))/h)
+    return print(f'후진차분식 = {(func(xi) - func(xmi))/h}')
 
 def centeredDiff(func, xi, h):
     xpi = xi + h
     xmi = xi - h
-    return print((func(xpi) - func(xmi))/(2*h))
+    return print(f'중간차분식 = {(func(xpi) - func(xmi))/(2*h)}')
+
+# 데이터를 활용한 수치미분
+def num_diff_with_data(x, y, position):
+
+    for i in range(len(x)):
+        if x[i] == position:
+            print(f'데이터 전진차분식 = {(y[i+1]-y[i])/(x[i+1]-x[i]):0.4f}')
+            print(f'데이터 중간차분식 = {(y[i]-y[i-1])/(x[i]-x[i-1]):0.4f}')
+            print(f'데이터 후진차분식 = {(y[i+1]-y[i-1])/(x[i+1]-x[i-1]):0.4f}')
+
 
 # 문제풀이 방법
 # 함수를 작성하고, 원하는 차분식 불러와 실행
 # ex) f(x) = xe^(-x)인 경우
+# 각각 순서대로 사용할 함수, 미분할 위치, 간격
+centeredDiff(f, 2, 0.1) 
 
-centeredDiff(f, 2, 0.1) # 각각 순서대로 사용할 함수, 위치, 간격
+# x배열, y배열, 미분할곳
+num_diff_with_data(x=np.array([1,2,3,4]), y=np.array([1.5, 1.3, 1.2, 1.1]), position=2)
+
+
+
+
 
 """
 수치미분의 유용성
